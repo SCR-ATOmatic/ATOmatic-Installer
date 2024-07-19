@@ -1,0 +1,8 @@
+numpy
+opencv-python
+pytesseract
+Pillow
+pygame
+pygame_gui
+gtts
+pydirectinput
