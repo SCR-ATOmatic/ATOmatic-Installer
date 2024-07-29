@@ -12,6 +12,14 @@ proceed = input("\nDo you wish to proceed? (Y/n) ")
 if proceed.lower() == "n":
     print("Canceled.")
     exit()
+    
+# Define the function to download a file from a URL
+def download_file(url, local_filename):
+    response = requests.get(url, stream=True)
+    response.raise_for_status()  # Check for errors in the request
+    with open(local_filename, 'wb') as file:
+        for chunk in response.iter_content(chunk_size=8192):
+            file.write(chunk)
 
 # Download the ATOmatic repository
 print("Downloading ATOmatic repository...")
