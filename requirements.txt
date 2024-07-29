@@ -6,3 +6,4 @@ pygame
 pygame_gui
 gtts
 pydirectinput
+requests
